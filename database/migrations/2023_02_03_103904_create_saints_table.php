@@ -16,9 +16,10 @@ return new class extends Migration {
             $table->id();
 
             $table->string('name', 32);
+            $table->string('lastname', 32);
             $table->string('place_of_birth', 32);
             $table->date('benedition');
-            $table->integer('Miracles')->unsigned();
+            $table->integer('miracles')->unsigned();
 
             $table->timestamps();
         });
