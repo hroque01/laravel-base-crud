@@ -15,6 +15,6 @@ class MainController extends Controller
         $data = [
             'saints' => $saints
         ];
-        return view('home', $data);
+        return view('pages.home', $data);
     }
 }
