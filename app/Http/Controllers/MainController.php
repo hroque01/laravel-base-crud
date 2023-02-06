@@ -37,4 +37,9 @@ class MainController extends Controller
         return redirect()->route('home');
     }
 
+    public function saintCreate()
+    {
+        return view('pages.saintCreate');
+    }
+
 }
