@@ -8,7 +8,11 @@
                     <a href="/saint/{{ $saint -> id }}">
                         Saint: {{ $saint -> name}} -  {{$saint -> lastname}}
                     </a> 
+                    -
+                    <a href="{{ route('saint.destroy', ['id' => $saint -> id])}}">DELETE</a>
+
                 </div>
+
             </li>
             <br>
         @endforeach
