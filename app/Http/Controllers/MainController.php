@@ -42,4 +42,21 @@ class MainController extends Controller
         return view('pages.saintCreate');
     }
 
+    public function saintStore(Request $request)
+    {
+        $data = $request->all();
+
+        $saint = new Saint();
+
+        $saint->name = $data['name'];
+        $saint->lastname = $data['lastname'];
+        $saint->place_of_birth = $data['place_of_birth'];
+        $saint->benedition = $data['benedition'];
+        $saint->miracles = $data['miracles '];
+
+        $saint->save();
+
+        return redirect()->route('home');
+    }
+
 }

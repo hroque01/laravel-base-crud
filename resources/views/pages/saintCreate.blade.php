@@ -2,7 +2,8 @@
 
 @section('main')
     <h1>CREATE A NEW SAINT</h1>
-    <form action="">
+    <form method="POST" action="{{ route('saint.store') }}">
+        @csrf
         <label for="name">Name</label>
         <input type="text" name="name">
         <br>
@@ -13,10 +14,10 @@
         <input type="text" name="place_of_brith">
         <br>
         <label for="benedition">Benedition</label>
-        <input type="text" name="benedition">
+        <input type="date" name="benedition">
         <br>
         <label for="miracles">Miracles</label>
-        <input type="text" name="miracles">
+        <input type="number" name="miracles">
         <br>
         <input type="submit" value="Create new saint">
     </form>
